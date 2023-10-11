@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DraginoDeviceController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +22,5 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/dashboard', [DashboardController::class, 'DashboardView']);
+Route::get('/', [Dashboard::class, 'index']);
+Route::get('/dragino-device', [DraginoDeviceController::class, 'index']);

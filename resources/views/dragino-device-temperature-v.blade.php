@@ -6,19 +6,15 @@
             <!-- Page-header start -->
             <div class="page-header">
                 <div class="row align-items-end">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         <div class="page-header-title">
                             <div class="d-inline">
-                                <h4>Sample Page</h4>
-                                <span>lorem ipsum
-                                    dolor sit amet,
-                                    consectetur
-                                    adipisicing
-                                    elit</span>
+                                <h4>Dragino Device LSNv50 v2</h4>
+                                <span>Data Visualization & Monitoring</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="page-header-breadcrumb">
                             <ul class="breadcrumb-title">
                                 <li class="breadcrumb-item">
@@ -27,7 +23,13 @@
                                     </a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="#!">Widget</a>
+                                    <a href="#!">Dragino Device</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#!">LSNv50 v2</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#!">Temperature</a>
                                 </li>
                             </ul>
                         </div>
@@ -36,7 +38,6 @@
             </div>
             <!-- Page-header end -->
 
-            
             <div class="page-body">
                 <div class="row">
                     <div class="col-sm-12">
@@ -44,9 +45,8 @@
                         <!-- Zero config.table start -->
                         <div class="card">
                             <div class="card-header">
-                                <h5>Zero Configuration</h5>
-                                <span>DataTables has most features enabled by default, so all you need to do to use it with
-                                    your own ables is to call the construction function: $().DataTable();.</span>
+                                <h5>Sensor Temperature</h5>
+                                <span>Data Sensor Temperature and Graphics</span>
 
                             </div>
                             <div class="card-block">
@@ -239,7 +239,7 @@
                             </div>
                         </div>
                         <!-- Zero config.table end -->
-                        
+
                     </div>
                 </div>
             </div>
