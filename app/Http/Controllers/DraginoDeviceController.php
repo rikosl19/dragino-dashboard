@@ -9,11 +9,16 @@ class DraginoDeviceController extends Controller
 {
     public function index(): View
     {
-        return view('dragino-device-v');
+        return view('dragino-device.temperature.dragino-device-temperature-v');
     }
     
-    public function temperature(): View 
+    public function dataTemperature(): View 
     {
-        return view('dragino-device-temperature-v');
+        return view('dragino-device.temperature.dragino-device-temperature-data-v');
+    }
+
+    public function visualTemperature(): View 
+    {
+        return view('dragino-device.temperature.dragino-device-temperature-visual-v');
     }
 }

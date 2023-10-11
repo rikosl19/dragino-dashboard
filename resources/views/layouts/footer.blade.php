@@ -2,6 +2,8 @@
 </div>
 </div>
 </div>
+{{-- Init Body End --}}
+
 <!-- Required Jquery -->
 <script type="text/javascript" src="..\files\bower_components\jquery\js\jquery.min.js"></script>
 <script type="text/javascript" src="..\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
@@ -12,7 +14,7 @@
 <!-- modernizr js -->
 <script type="text/javascript" src="..\files\bower_components\modernizr\js\modernizr.js"></script>
 <script type="text/javascript" src="..\files\bower_components\modernizr\js\css-scrollbars.js"></script>
-<!-- Custom js -->
+
 {{-- Custom JS Import --}}
 <script src="..\files\assets\pages\data-table\js\data-table-custom.js"></script>
 <script src="..\files\assets\js\pcoded.min.js"></script>
@@ -30,15 +32,14 @@
 <script src="..\files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
 <script src="..\files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
 <script src="..\files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js"></script>
-<!-- amchart js -->
+<!-- amchart js --> 
 <script src="..\files\assets\pages\widget\amchart\amcharts.js"></script>
 <script src="..\files\assets\pages\widget\amchart\serial.js"></script>
 <script src="..\files\assets\pages\widget\amchart\light.js"></script>
 <!-- i18next.min.js -->
 <script type="text/javascript" src="..\files\bower_components\i18next\js\i18next.min.js"></script>
 <script type="text/javascript" src="..\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
-<script type="text/javascript"
-    src="..\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="..\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
 <script type="text/javascript" src="..\files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
 {{-- Custom JS Import END --}}
 
