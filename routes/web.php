@@ -22,5 +22,5 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', [Dashboard::class, 'index']);
+Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dragino-device', [DraginoDeviceController::class, 'index']);
