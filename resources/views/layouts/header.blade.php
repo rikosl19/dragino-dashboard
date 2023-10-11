@@ -34,6 +34,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('files/assets/css/style.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('files/assets/css/jquery.mCustomScrollbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('files/assets/scss/partials/menu/_pcmenu.htm') }}" />
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css') }}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('files\assets\pages\data-table\css\buttons.dataTables.min.css') }}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css') }}" />
 </head>
 
 <body>
@@ -83,11 +90,11 @@
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        {{-- <a class="mobile-menu" id="mobile-collapse" href="#!">
-                            <i class="feather icon-menu"></i></a> --}}
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="feather icon-menu"></i></a>
                         <a href="#">
-                            <img class="img-fluid" src="{{ asset('files/assets/images/dragino-logo-text-scale.png') }}"
-                                alt="Theme-Logo" /></a>
+                            <img class="img-fluid"
+                                src="{{ asset('files/assets/images/dragino-logo-text-scale.png') }}"alt="Theme-Logo" /></a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i></a>
                     </div>
@@ -127,7 +134,7 @@
                                         <li>
                                             <div class="media">
                                                 <img class="d-flex align-self-center img-radius"
-                                                    src="{{ asset('files/assets/images/avatar-4.jpg') }}"
+                                                    src="..\files\assets\images\avatar-4.jpg"
                                                     alt="Generic placeholder image" />
                                                 <div class="media-body">
                                                     <h5 class="notification-user">
@@ -138,7 +145,8 @@
                                                         sit amet,
                                                         consectetuer elit.
                                                     </p>
-                                                    <span class="notification-time">30 minutes ago</span>
+                                                    <span class="notification-time">30 minutes
+                                                        ago</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -156,7 +164,27 @@
                                                         sit amet,
                                                         consectetuer elit.
                                                     </p>
-                                                    <span class="notification-time">30 minutes ago</span>
+                                                    <span class="notification-time">30 minutes
+                                                        ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius"
+                                                    src="..\files\assets\images\avatar-4.jpg"
+                                                    alt="Generic placeholder image" />
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">
+                                                        Sara Soudein
+                                                    </h5>
+                                                    <p class="notification-msg">
+                                                        Lorem ipsum dolor
+                                                        sit amet,
+                                                        consectetuer elit.
+                                                    </p>
+                                                    <span class="notification-time">30 minutes
+                                                        ago</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -166,9 +194,9 @@
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="..\files\assets\images\avatar-4.jpg" class="img-radius"
+                                        <img src="{{ asset('files/assets/images/avatar-4.jpg') }}" class="img-radius"
                                             alt="User-Profile-Image" />
-                                        <span>John Doe</span>
+                                        <span>Kizu</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu"
@@ -180,7 +208,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="auth-normal-sign-in.htm">
+                                            <a href="#">
                                                 <i class="feather icon-log-out"></i>
                                                 Logout
                                             </a>
