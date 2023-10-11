@@ -14,14 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="#" />
-    <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app" />
+    <meta name="keywords"
+        content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app" />
     <meta name="author" content="#" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{ asset('files/assets/images/favicon.ico') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('files/assets/images/dragino-logo-image.png') }}" type="image/x-icon" />
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('files/bower_components/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('files/bower_components/bootstrap/css/bootstrap.min.css') }}" />
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="{{ asset('files/assets/icon/themify-icons/themify-icons.css') }}" />
     <!-- ico font -->
@@ -77,18 +79,19 @@
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
         <div class="pcoded-container navbar-wrapper">
-    
+
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        <a class="mobile-menu" id="mobile-collapse" href="#!">
-                            <i class="feather icon-menu"></i></a>
-                        <a href="index-1.htm">
-                            <img class="img-fluid" src="{{ asset('files/assets/images/logo.png') }}" alt="Theme-Logo" /></a>
+                        {{-- <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="feather icon-menu"></i></a> --}}
+                        <a href="#">
+                            <img class="img-fluid" src="{{ asset('files/assets/images/dragino-logo-text-scale.png') }}"
+                                alt="Theme-Logo" /></a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i></a>
                     </div>
-    
+
                     <div class="navbar-container container-fluid">
                         <ul class="nav-left">
                             <li class="header-search">
@@ -115,14 +118,17 @@
                                         <i class="feather icon-bell"></i>
                                         <span class="badge bg-c-pink">5</span>
                                     </div>
-                                    <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <ul class="show-notification notification-view dropdown-menu"
+                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
                                             <h6>Notifications</h6>
                                             <label class="label label-danger">New</label>
                                         </li>
                                         <li>
                                             <div class="media">
-                                                <img class="d-flex align-self-center img-radius" src="{{ asset('files/assets/images/avatar-4.jpg') }}" alt="Generic placeholder image" />
+                                                <img class="d-flex align-self-center img-radius"
+                                                    src="{{ asset('files/assets/images/avatar-4.jpg') }}"
+                                                    alt="Generic placeholder image" />
                                                 <div class="media-body">
                                                     <h5 class="notification-user">
                                                         John Doe
@@ -165,7 +171,8 @@
                                         <span>John Doe</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
-                                    <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <ul class="show-notification profile-notification dropdown-menu"
+                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
                                             <a href="#!">
                                                 <i class="feather icon-settings"></i>

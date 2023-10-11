@@ -15,7 +15,7 @@
 
                     <li class="pcoded-hasmenu">
                         <a href="javascript:void(0)">
-                            <span class="pcoded-micon"><i class="feather icon-package rotate-refresh"></i></span>
+                            <span class="pcoded-micon"><i class="feather icon-package"></i></span>
                             <span class="pcoded-mtext">Dragino Device</span>
                         </a>
                         <ul class="pcoded-submenu">
@@ -35,9 +35,9 @@
                     </li>
 
                     <li class="pcoded-hasmenu">
-                        <a href="javascript:void(0)">
+                        <a href="#">
                             <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
-                            <span class="pcoded-mtext">Dragino Device</span>
+                            <span class="pcoded-mtext">Setting</span>
                         </a>
                         <ul class="pcoded-submenu">
                             <li class="">
