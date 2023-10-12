@@ -23,6 +23,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', [DashboardController::class, 'index']);
-Route::get('/dragino-device/temperature', [DraginoDeviceController::class, 'index']);
-Route::get('/dragino-device/temperature/data', [DraginoDeviceController::class, 'dataTemperature']);
-Route::get('/dragino-device/temperature/visual', [DraginoDeviceController::class, 'visualTemperature']);
+Route::resource('/dragino-device/air-temperature', DraginoDeviceController::class);
+// Route::get('/dragino-device/air-temperature', [DraginoDeviceController::class, 'index']);
+// Route::get('/dragino-device/temperature/data', [DraginoDeviceController::class, 'dataTemperature']);
+// Route::get('/dragino-device/temperature/visual', [DraginoDeviceController::class, 'visualTemperature']);
