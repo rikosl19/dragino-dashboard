@@ -12,7 +12,7 @@ class DraginoDeviceController extends Controller
     public function index(): View
     {
         $data = SensorAirTemperature::latest()->paginate(10);
-        dd($data);
+        // return view('dragino-device.air-temperature.dragino-device-air-temperature-v', ['sensor' => $data['sensor']]);
         return view('dragino-device.air-temperature.dragino-device-air-temperature-v', compact('data'));
     }
 
