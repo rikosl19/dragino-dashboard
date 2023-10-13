@@ -29,11 +29,14 @@
                             <td>{{ $air_temp->date }}</td>
                             <td>{{ $air_temp->time }}</td>
                             <td>
-                                <button class="btn btn-round btn-outline-warning"><i class="icofont icofont-ui-edit"></i>Edit</button>
-                                <button class="btn btn-round btn-outline-danger"><i class="icofont icofont-ui-delete"></i>Delete</button>
+                                <button class="btn btn-round btn-outline-warning"><i
+                                        class="icofont icofont-ui-edit"></i>Edit</button>
+                                <button class="btn btn-round btn-outline-danger"><i
+                                        class="icofont icofont-ui-delete"></i>Delete</button>
                             </td>
                         </tr>
                     @endforeach
+
                 </tbody>
                 <tfoot>
                     <th>No</th>
