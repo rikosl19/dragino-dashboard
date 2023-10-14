@@ -32,14 +32,12 @@
 <script src="..\files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
 <script src="..\files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
 <script src="..\files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js"></script>
-<!-- amchart js --> 
-<script src="..\files\assets\pages\widget\amchart\amcharts.js"></script>
-<script src="..\files\assets\pages\widget\amchart\serial.js"></script>
-<script src="..\files\assets\pages\widget\amchart\light.js"></script>
+
 <!-- i18next.min.js -->
 <script type="text/javascript" src="..\files\bower_components\i18next\js\i18next.min.js"></script>
 <script type="text/javascript" src="..\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="..\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript"
+    src="..\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
 <script type="text/javascript" src="..\files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
 {{-- Custom JS Import END --}}
 
