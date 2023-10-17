@@ -18,6 +18,8 @@
                     </tr>
                 </thead>
                 <tbody style="text-align:center">
+
+                    {{-- Data Plot Table --}}
                     @php
                         $no = 1;
                     @endphp
