@@ -1,4 +1,7 @@
+{{-- Import Frame --}}
 @extends('layouts.apps')
+
+{{-- Content --}}
 @section('content')
     <div class="main-body">
         <div class="page-wrapper">
@@ -48,4 +51,5 @@
     </div>
 @endsection
 
+{{-- Import Script Graph amChart --}}
 @include('layouts.script')
