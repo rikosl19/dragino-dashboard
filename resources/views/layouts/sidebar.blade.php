@@ -35,7 +35,7 @@
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/air-humidity') }}">
                                             <span class="pcoded-mtext">Air Humidity</span>
                                         </a>
                                     </li>
