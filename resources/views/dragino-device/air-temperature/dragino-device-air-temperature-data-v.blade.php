@@ -12,8 +12,7 @@
                     <tr>
                         <th>No</th>
                         <th>Temperature</th>
-                        <th>Date</th>
-                        <th>Time</th>
+                        <th>Date Time</th>
                         <th>Option</th>
                     </tr>
                 </thead>
@@ -28,8 +27,7 @@
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $air_temp->temperature }} <span>&#8451;</span></td>
-                            <td>{{ $air_temp->date }}</td>
-                            <td>{{ $air_temp->time }}</td>
+                            <td>{{ $air_temp->datetime }}</td>
                             <td>
                                 <button class="btn btn-round btn-outline-warning"><i
                                         class="icofont icofont-ui-edit"></i>Edit</button>
@@ -41,11 +39,11 @@
 
                 </tbody>
                 <tfoot>
-                    <th>No</th>
-                    <th>Temperature</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Option</th>
+                    <tr>
+                        <th>No</th>
+                        <th>Temperature</th>
+                        <th>Date Time</th>
+                        <th>Option</th>
                     </tr>
                 </tfoot>
             </table>
