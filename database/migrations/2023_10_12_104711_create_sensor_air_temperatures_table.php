@@ -14,9 +14,7 @@ return new class extends Migration
         Schema::create('sensor_air_temperatures', function (Blueprint $table) {
             $table->id();
             $table->float('temperature')->nullable(false);
-            $table->date('date');
-            $table->time('time');
-            $table->timestamps();
+            $table->timestamps('datetime');
         });
     }
 

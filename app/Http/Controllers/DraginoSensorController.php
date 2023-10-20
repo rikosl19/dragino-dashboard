@@ -23,16 +23,13 @@ class DraginoSensorController extends Controller
         $timestamp = $data['created_at'];
 
         $dateTime = new DateTime($timestamp);
-        $date = $dateTime->format('Y-m-d');
-        $time = $dateTime->format('H:i');
 
         // Data Validation check in database to prevent the duplication
-        if (!SensorAirTemperature::where('time', $time)->count() > 0) {
+        if (!SensorAirTemperature::where('datetime', $dateTime)->count() > 0) {
                         $dataAirtTemp = new SensorAirTemperature(
                 [
                     'temperature' => $airtemp,
-                    'date' => $date,
-                    'time' => $time
+                    'datetime' => $dateTime
                 ]
             );
 
@@ -51,7 +48,7 @@ class DraginoSensorController extends Controller
         $filteredData = $data->map(function ($item) {
             return [
                 'value' => $item->temperature,
-                'date' => $item->date,
+                'datetime' => $item->datetime,
             ];
         });
 

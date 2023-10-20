@@ -11,7 +11,6 @@ class SensorAirTemperature extends Model
     protected $fillable = [
         'id',
         'temperature',
-        'date',
-        'time'
+        'datetime'
     ];
 }
