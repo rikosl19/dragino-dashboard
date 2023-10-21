@@ -22,4 +22,25 @@ class DraginoDeviceController extends Controller
         // dd($data);
         return view('dragino-device.air-humidity.dragino-device-air-humidity-v', compact('data'));
     }
+
+    public function monitorSoilTemp(): View
+    {
+        $data = SensorAirHumidity::all();
+        // dd($data);
+        return view('dragino-device.soil-temperature.dragino-device-soil-temperature-v', compact('data'));
+    }
+
+    public function monitorSoilMoisture(): View
+    {
+        $data = SensorAirHumidity::all();
+        // dd($data);
+        return view('dragino-device.soil-moisture.dragino-device-soil-moisture-v', compact('data'));
+    }
+
+    public function monitorLightIntensity(): View
+    {
+        $data = SensorAirHumidity::all();
+        // dd($data);
+        return view('dragino-device.light-intensity.dragino-device-light-intensity-v', compact('data'));
+    }
 }

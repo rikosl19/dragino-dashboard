@@ -59,6 +59,22 @@ class DraginoSensorController extends Controller
         return response()->json(['data' => $filteredData, 'status' => 'true']);
     }
 
+    public function AirTemperatureDataLast()
+    {
+        $data = SensorAirTemperature::latest()->paginate(1);
+
+        $filteredData = $data->map(function ($item) {
+            return [
+                'value' => $item->temperature,
+                'datetime' => $item->datetime,
+            ];
+        });
+
+        //dd($filteredData);
+
+        return response()->json(['data' => $filteredData, 'status' => 'true']);
+    }
+
     public function AirHumidityPull()
     {
         // Pull data from API Thingspeak Air Temperature
