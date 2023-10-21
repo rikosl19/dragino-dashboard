@@ -1,7 +1,7 @@
 <!-- Page-Temperature Graphics start -->
 <div class="card">
     <div class="card-header">
-        <h5>Graphics Temperature</h5>
+        <h5>Graphics Humidity</h5>
     </div>
 
     <div class="card-block">
@@ -73,7 +73,7 @@
         // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
         var series = chart.series.push(am5xy.LineSeries.new(root, {
             minBulletDistance: 10,
-            name: "Series 1",
+            name: "Series 2",
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: "value",
@@ -87,7 +87,7 @@
         // Load data using ajax
         function LiveData() {
             $.ajax({
-                url: "/dragino-sensor/air-temperature/get",
+                url: "/dragino-sensor/air-humidity/get",
                 method: "GET",
                 success: function(data) {
 

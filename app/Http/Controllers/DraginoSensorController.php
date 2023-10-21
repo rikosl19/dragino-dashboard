@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SensorAirTemperature;
+use App\Models\SensorAirHumidity;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use GuzzleHttp\Client;
@@ -26,7 +27,7 @@ class DraginoSensorController extends Controller
 
         // Data Validation check in database to prevent the duplication
         if (!SensorAirTemperature::where('datetime', $dateTime)->count() > 0) {
-                        $dataAirtTemp = new SensorAirTemperature(
+            $dataAirtTemp = new SensorAirTemperature(
                 [
                     'temperature' => $airtemp,
                     'datetime' => $dateTime
@@ -42,7 +43,8 @@ class DraginoSensorController extends Controller
         return response()->json($statusReturn);
     }
 
-    public function AirTemperatureData(){
+    public function AirTemperatureData()
+    {
         $data = SensorAirTemperature::all();
 
         $filteredData = $data->map(function ($item) {
@@ -54,6 +56,53 @@ class DraginoSensorController extends Controller
 
         //dd($filteredData);
 
-        return response()->json(['data'=>$filteredData,'status'=> 'true']);
+        return response()->json(['data' => $filteredData, 'status' => 'true']);
+    }
+
+    public function AirHumidityPull()
+    {
+        // Pull data from API Thingspeak Air Temperature
+        $client = new Client();
+        $response = $client->get('https://api.thingspeak.com/channels/1285589/fields/7/last.json?timezone=Asia/Jakarta');
+        $data = json_decode($response->getBody(), true);
+
+        //Trasnform data Json into variable
+        $airhumidity = $data['field7'];
+        $timestamp = $data['created_at'];
+
+        $dateTime = new DateTime($timestamp);
+
+        // Data Validation check in database to prevent the duplication
+        if (!SensorAirHumidity::where('datetime', $dateTime)->count() > 0) {
+            $dataAirtTemp = new SensorAirHumidity(
+                [
+                    'humidities' => $airhumidity,
+                    'datetime' => $dateTime
+                ]
+            );
+
+            $dataAirtTemp->save();
+            $statusReturn = ['status' => 'true', 'message' => 'Data has been fetched and stored in the database'];
+        } else {
+            $statusReturn = ['status' => 'false', 'message' => 'Data has been fetched but data already exists in the database'];
+        }
+
+        return response()->json($statusReturn);
+    }
+
+    public function AirHumidityData()
+    {
+        $data = SensorAirHumidity::all();
+
+        $filteredData = $data->map(function ($item) {
+            return [
+                'value' => $item->humidities,
+                'datetime' => $item->datetime,
+            ];
+        });
+
+        //dd($filteredData);
+
+        return response()->json(['data' => $filteredData, 'status' => 'true']);
     }
 }

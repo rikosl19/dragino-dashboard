@@ -29,13 +29,16 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::controller(DraginoDeviceController::class)->group(function () {
     Route::prefix('dragino-device')->group(function () {
         Route::get('/air-temperature', 'monitorAirTemp')->name('lsn50v2-airtemp');
+        Route::get('/air-humidity', 'monitorAirHumidity')->name('lsn50v2-airhumidity');
     });
 });
 
 Route::controller(DraginoSensorController::class)->group(function () {
     Route::prefix('dragino-sensor')->group(function () {
-        Route::get('/air-temperature/pull','AirTemperaturePull')->name('data-pull');
-        Route::get('/air-temperature/get','AirTemperatureData')->name('data-get');        
+        Route::get('/air-temperature/pull','AirTemperaturePull')->name('data-pull-temp');
+        Route::get('/air-temperature/get','AirTemperatureData')->name('data-get-temp');        
+        Route::get('/air-humidity/pull','AirHumidityPull')->name('data-pull-humidity');
+        Route::get('/air-humidity/get','AirHumidityData')->name('data-get-humidity');        
     });
     
 });
