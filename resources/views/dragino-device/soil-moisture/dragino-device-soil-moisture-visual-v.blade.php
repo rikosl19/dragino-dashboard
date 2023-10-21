@@ -1,7 +1,7 @@
 <!-- Page-Temperature Graphics start -->
 <div class="card">
     <div class="card-header">
-        <h5>Graphics Temperature</h5>
+        <h5>Graphics Moisture</h5>
     </div>
 
     <div class="card-block">
@@ -136,10 +136,10 @@
                 var datax = generateChartData();
                 // console.log(data.data.length);
                 // console.log(datax[0].date);
-                console.log(datax);
+                // console.log(datax);
                 // // console.log(data.data.value[1]);
                 // datax[datax.length - 1].bullet = true;
-                series.data.setAll(datax);
+                // series.data.setAll(datax);
 
 
                 // // Load data using ajax
@@ -166,6 +166,7 @@
 
 
                 series.bullets.push(function() {
+
                     return am5.Bullet.new(root, {
                         locationX: undefined,
                         sprite: am5.Circle.new(root, {
@@ -271,11 +272,11 @@
             });
         }
 
-        // setTimeout(() => {
-            setInterval(() => {
-                addDataRealtime();
-            }, 10000);
-        // }, 3000);
+
+        setInterval(() => {
+            addDataRealtime();
+        }, 10000);
+
 
         // setInterval(() => {
         //     LiveData();

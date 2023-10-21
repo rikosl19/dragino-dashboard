@@ -40,17 +40,17 @@
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/soil-temperature') }}">
                                             <span class="pcoded-mtext">Soil Temperature</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/soil-moisture') }}">
                                             <span class="pcoded-mtext">Soil Moisture</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/light-intensity') }}">
                                             <span class="pcoded-mtext">Light Intensity</span>
                                         </a>
                                     </li>
