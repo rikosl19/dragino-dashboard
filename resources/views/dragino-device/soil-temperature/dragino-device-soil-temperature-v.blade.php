@@ -5,7 +5,6 @@
 @section('content')
     <div class="main-body">
         <div class="page-wrapper">
-
             <div class="page-header">
                 <div class="row align-items-end">
                     <div class="col-lg-6">

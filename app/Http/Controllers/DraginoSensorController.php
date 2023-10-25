@@ -11,6 +11,7 @@ use DateTime;
 
 class DraginoSensorController extends Controller
 {
+    
     //
     public function AirTemperaturePull()
     {

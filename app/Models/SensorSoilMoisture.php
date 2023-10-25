@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SensorAirHumidity extends Model
+class SensorSoilMoisture extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'id',
-        'humidity',
-        'datetime'
-    ];
 }

@@ -10,10 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('sensor_air_temperatures', function (Blueprint $table) {
+        Schema::create('sensor_air_humidity', function (Blueprint $table) {
             $table->id();
             $table->string('device')->nullable(false);
-            $table->float('temperature')->nullable(false);
+            $table->float('humidities')->nullable(false);
             $table->timestamp('datetime')->nullable(false);
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensor_air_temperatures');
+        Schema::dropIfExists('sensor_air_humidity');
     }
 };

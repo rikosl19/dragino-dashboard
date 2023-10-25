@@ -42,8 +42,8 @@
             <div class="page-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        @include('dragino-device.air-temperature.dragino-device-air-temperature-visual-v')
-                        @include('dragino-device.air-temperature.dragino-device-air-temperature-data-v')
+                        @include('dragino-device.soil-moisture.dragino-device-soil-moisture-visual-v')
+                        @include('dragino-device.soil-moisture.dragino-device-soil-moisture-data-v')
                     </div>
                 </div>
             </div>
