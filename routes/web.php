@@ -38,11 +38,30 @@ Route::controller(DraginoDeviceController::class)->group(function () {
 
 Route::controller(DraginoSensorController::class)->group(function () {
     Route::prefix('dragino-sensor')->group(function () {
-        Route::get('/air-temperature/pull', 'AirTemperaturePull')->name('data-pull-temp');
-        Route::get('/air-temperature/get', 'AirTemperatureData')->name('data-get-temp');
-        Route::get('/air-temperature/latest', 'AirTemperatureDataLast')->name('data-get-temp-last');
+        //Air Temperature
+        Route::get('/air-temperature/pull', 'AirTemperaturePull')->name('data-pull-air-temperature');
+        Route::get('/air-temperature/get', 'AirTemperatureData')->name('data-get-air-temperature');
+        Route::get('/air-temperature/latest', 'AirTemperatureDataLast')->name('data-get-air-temperature-last');
+
+        //Air Humidity
         Route::get('/air-humidity/pull', 'AirHumidityPull')->name('data-pull-humidity');
         Route::get('/air-humidity/get', 'AirHumidityData')->name('data-get-humidity');
+        Route::get('/air-humidity/latest', 'AirHumidityDataLast')->name('data-get-humidity-last');
+
+        //Soil Temperature
+        Route::get('/soil-temperature/pull', 'SoilTemperaturePull')->name('data-pull-soil-temp');
+        Route::get('/soil-temperature/get', 'SoilTemperatureData')->name('data-get-soil-temp');
+        Route::get('/soil-temperature/latest', 'SoilTemperatureDataLast')->name('data-get-soil-temp-last');
+
+        //Soil Moisture
+        Route::get('/soil-moisture/pull', 'SoilMoisturePull')->name('data-pull-soil-moisture');
+        Route::get('/soil-moisture/get', 'SoilMoistureData')->name('data-get-soil-moisture');
+        Route::get('/soil-moisture/latest', 'SoilMoistureDataLast')->name('data-get-soil-moisture-last');
+
+        //Light Intensity
+        Route::get('/light-intensity/pull', 'LightIntensityPull')->name('data-pull-ligt-intensity');
+        Route::get('/light-intensity/get', 'LightIntensityData')->name('data-get-ligt-intensity');
+        Route::get('/light-intensity/latest', 'LightIntensityDataLast')->name('data-get-ligt-intensity-last');
     });
 
 });

@@ -22,7 +22,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             $PullDataTemperature = new DraginoSensorController();
             $PullDataTemperature->AirHumidityPull();
-        })->everyMinute();
+        })->everyThreeMinutes();
 
         
     }

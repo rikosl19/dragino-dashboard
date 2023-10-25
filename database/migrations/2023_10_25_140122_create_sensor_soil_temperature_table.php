@@ -4,16 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('sensor_air_humidities', function (Blueprint $table) {
+        Schema::create('sensor_soil_temperature', function (Blueprint $table) {
             $table->id();
-            $table->float('humidities')->nullable(false);
+            $table->string('device')->nullable(false);
+            $table->float('soil_temp')->nullable(false);
             $table->timestamp('datetime')->nullable(false);
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensor_air_humidities');
+        Schema::dropIfExists('sensor_soil_temperature');
     }
 };
