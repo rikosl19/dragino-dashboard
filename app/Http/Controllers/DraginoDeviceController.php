@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\SensorAirHumidity;
 use App\Models\SensorAirTemperature;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use Termwind\Components\Dd;
+
 
 class DraginoDeviceController extends Controller
 {
