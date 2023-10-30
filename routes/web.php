@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthLogin;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DraginoDeviceController;
 use App\Http\Controllers\DraginoSensorController;
@@ -24,6 +25,8 @@ Route::get('/', function () {
 */
 
 Route::get('/', [DashboardController::class, 'index']);
+
+Route::get('/login', [AuthLogin::class, 'login']);
 
 
 Route::controller(DraginoDeviceController::class)->group(function () {
