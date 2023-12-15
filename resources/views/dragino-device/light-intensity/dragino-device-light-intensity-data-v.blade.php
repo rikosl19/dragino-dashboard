@@ -1,7 +1,7 @@
 <!-- Page-Temperature Data start -->
 <div class="card">
     <div class="card-header">
-        <h5>Data Table Temperature</h5>
+        <h5>Data Table Light Intensity</h5>
     </div>
 
     <div class="card-block">
@@ -12,7 +12,7 @@
                     <tr>
                         <th>No</th>
                         <th>Lumens</th>
-                        <th>Date Time</th>
+                        <th>Datetime</th>
                         <th>Option</th>
                     </tr>
                 </thead>
@@ -42,7 +42,7 @@
                     <tr>
                         <th>No</th>
                         <th>Lumens</th>
-                        <th>Date Time</th>
+                        <th>Datetime</th>
                         <th>Option</th>
                     </tr>
                 </tfoot>

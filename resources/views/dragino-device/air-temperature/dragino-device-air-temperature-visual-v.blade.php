@@ -272,9 +272,9 @@
         }
 
         // setTimeout(() => {
-            setInterval(() => {
-                addDataRealtime();
-            }, 10000);
+        setInterval(() => {
+            addDataRealtime();
+        }, 10000);
         // }, 3000);
 
         // setInterval(() => {

@@ -2,11 +2,13 @@
 <div class="card">
     <div class="card-header">
         <h5>Data Table Temperature</h5>
+        <button class="btn btn-round btn-primary align-items-end" onclick=""><i class="icofont icofont-refresh"></i>Refresh</button>
+
     </div>
 
     <div class="card-block">
-        <div class="dt-responsive table-responsive ">
 
+        <div class="dt-responsive table-responsive ">
             <table id="compact" class="table compact table-striped table-bordered nowrap">
                 <thead>
                     <tr>
