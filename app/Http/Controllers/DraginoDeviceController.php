@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\SensorAirHumidity;
 use App\Models\SensorAirTemperature;
+use App\Models\SensorSoilMoisture;
+use App\Models\SensorSoilTemperature;
+use App\Models\SensorLightIntensity;
+use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
 
@@ -24,21 +28,21 @@ class DraginoDeviceController extends Controller
 
     public function monitorSoilTemp(): View
     {
-        $data = SensorAirHumidity::all();
+        $data = SensorSoilTemperature::all();
         // dd($data);
         return view('dragino-device.soil-temperature.dragino-device-soil-temperature-v', compact('data'));
     }
 
     public function monitorSoilMoisture(): View
     {
-        $data = SensorAirHumidity::all();
+        $data = SensorSoilMoisture::all();
         // dd($data);
         return view('dragino-device.soil-moisture.dragino-device-soil-moisture-v', compact('data'));
     }
 
     public function monitorLightIntensity(): View
     {
-        $data = SensorAirHumidity::all();
+        $data = SensorLightIntensity::all();
         // dd($data);
         return view('dragino-device.light-intensity.dragino-device-light-intensity-v', compact('data'));
     }

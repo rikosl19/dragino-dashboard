@@ -8,7 +8,7 @@
                 <div class="pcoded-navigatio-lavel">Dragino Panel</div>
                 <ul class="pcoded-item pcoded-left-item">
                     <li class="">
-                        <a href="javascript:void(0)">
+                        <a href="{{ url('/dashboard') }}">
                             <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                             <span class="pcoded-mtext">Dashboard</span>
                         </a>
@@ -99,24 +99,26 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="pcoded-hasmenu">
+                    {{-- <li class="pcoded-hasmenu">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
                             <span class="pcoded-mtext">Settings</span>
                         </a>
                         <ul class="pcoded-submenu">
                             <li class="">
-                                <a href="javascript:void(0)">
+
+                                <a href="">
                                     <i class="feather icon-log-out"></i>
                                     <span>
                                         &NonBreakingSpace;
                                         &NonBreakingSpace;
-                                        Log Out
+                                        {{  }}
                                     </span>
                                 </a>
+
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </nav>

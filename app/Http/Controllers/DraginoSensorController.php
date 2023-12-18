@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\SensorAirTemperature;
 use App\Models\SensorAirHumidity;
 use GuzzleHttp\Client;

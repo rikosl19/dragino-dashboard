@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthLogin;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DraginoDeviceController;
 use App\Http\Controllers\DraginoSensorController;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,16 +17,19 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-/* 
 Route::get('/', function () {
     return view('welcome');
 });
-*/
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard-v');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/login', [AuthLogin::class, 'login']);
-
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 Route::controller(DraginoDeviceController::class)->group(function () {
     Route::prefix('dragino-device')->group(function () {
@@ -69,6 +71,4 @@ Route::controller(DraginoSensorController::class)->group(function () {
 
 });
 
-// Route::get('/dragino-device/air-temperature', [DraginoDeviceController::class, 'index']);
-// Route::get('/dragino-device/temperature/data', [DraginoDeviceController::class, 'dataTemperature']);
-// Route::get('/dragino-device/temperature/visual', [DraginoDeviceController::class, 'visualTemperature']);
+require __DIR__ . '/auth.php';

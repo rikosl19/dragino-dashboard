@@ -213,10 +213,21 @@
                                     <ul class="show-notification profile-notification dropdown-menu"
                                         data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li class="">
-                                            <a href="#">
-                                                <i class="feather icon-log-out"></i>
-                                                Logout
-                                            </a>
+
+                                            <!-- Authentication -->
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+
+                                                <a :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                                    <i class="feather icon-log-out"></i>
+                                                    Logout
+                                                </a>
+
+                                                {{-- <a href="#">
+
+                                                </a> --}}
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>
