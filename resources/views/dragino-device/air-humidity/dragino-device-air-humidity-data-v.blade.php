@@ -1,7 +1,7 @@
 <!-- Page-Temperature Data start -->
 <div class="card">
     <div class="card-header">
-        <h5>Data Table Humidity</h5>
+        <h5>Data Table Humidity {{ collect(request()->segments())->last() }}</h5>
     </div>
 
     <div class="card-block">
@@ -11,9 +11,10 @@
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Device</th>
                         <th>Humidity</th>
                         <th>Date Time</th>
-                        <th>Option</th>
+                        {{-- <th>Option</th> --}}
                     </tr>
                 </thead>
                 <tbody style="text-align:center">
@@ -26,14 +27,23 @@
                     @foreach ($data as $air_humidity)
                         <tr>
                             <td>{{ $no++ }}</td>
+                            <td>
+                                @php
+                                    if ($air_humidity->device == 'BAU') {
+                                        echo 'LSNv50-BAU';
+                                    }else {
+                                        echo 'LSNv50-LC';
+                                    }
+                                @endphp
+                            </td>
                             <td>{{ $air_humidity->humidities }} <span>&#x25;</span></td>
                             <td>{{ $air_humidity->datetime }}</td>
-                            <td>
+                            {{-- <td>
                                 <button class="btn btn-round btn-outline-warning"><i
                                         class="icofont icofont-ui-edit"></i>Edit</button>
                                 <button class="btn btn-round btn-outline-danger"><i
                                         class="icofont icofont-ui-delete"></i>Delete</button>
-                            </td>
+                            </td> --}}
                         </tr>
                     @endforeach
 
@@ -41,9 +51,10 @@
                 <tfoot>
                     <tr>
                         <th>No</th>
+                        <th>Device</th>
                         <th>Humidity</th>
                         <th>Date Time</th>
-                        <th>Option</th>
+                        {{-- <th>Option</th> --}}
                     </tr>
                 </tfoot>
             </table>

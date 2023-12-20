@@ -11,7 +11,7 @@
                     <div class="col-lg-6">
                         <div class="page-header-title">
                             <div class="d-inline">
-                                <h4>Soil Moisture</h4>
+                                <h4>Soil Moisture {{ collect(request()->segments())->last() }}</h4>
                                 <span>Data Visualization & Monitoring</span>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
             <div class="page-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        @include('dragino-device.soil-moisture.dragino-device-soil-moisture-visual-v')
+                        {{-- @include('dragino-device.soil-moisture.dragino-device-soil-moisture-visual-v') --}}
                         @include('dragino-device.soil-moisture.dragino-device-soil-moisture-data-v')
                     </div>
                 </div>

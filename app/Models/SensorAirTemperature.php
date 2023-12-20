@@ -10,6 +10,7 @@ class SensorAirTemperature extends Model
     use HasFactory;
     protected $fillable = [
         'id',
+        'device',
         'temperature',
         'datetime'
     ];

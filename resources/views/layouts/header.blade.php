@@ -37,11 +37,11 @@
     <link rel="stylesheet" href="{{ asset('files/assets/scss/partials/menu/_pcmenu.htm') }}" />
     <!-- Data Table Css -->
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css') }}" />
+        href="{{ asset('files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" />
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('files\assets\pages\data-table\css\buttons.dataTables.min.css') }}" />
+        href="{{ asset('files/assets/pages/data-table/css/buttons.dataTables.min.css') }}" />
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css') }}" />
+        href="{{ asset('files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" />
 </head>
 {{-- Header --}}
 
@@ -213,10 +213,21 @@
                                     <ul class="show-notification profile-notification dropdown-menu"
                                         data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li class="">
-                                            <a href="#">
-                                                <i class="feather icon-log-out"></i>
-                                                Logout
-                                            </a>
+
+                                            <!-- Authentication -->
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+
+                                                <a :href="route('logout')"
+                                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                                    <i class="feather icon-log-out"></i>
+                                                    Logout
+                                                </a>
+
+                                                {{-- <a href="#">
+
+                                                </a> --}}
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>

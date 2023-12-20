@@ -5,13 +5,12 @@
 @section('content')
     <div class="main-body">
         <div class="page-wrapper">
-
             <div class="page-header">
                 <div class="row align-items-end">
                     <div class="col-lg-6">
                         <div class="page-header-title">
                             <div class="d-inline">
-                                <h4>Air Temperature</h4>
+                                <h4>Air Temperature {{ collect(request()->segments())->last() }}</h4>
                                 <span>Data Visualization & Monitoring</span>
                             </div>
                         </div>
@@ -42,7 +41,7 @@
             <div class="page-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        @include('dragino-device.air-temperature.dragino-device-air-temperature-visual-v')
+                        {{-- @include('dragino-device.air-temperature.dragino-device-air-temperature-visual-v') --}}
                         @include('dragino-device.air-temperature.dragino-device-air-temperature-data-v')
                     </div>
                 </div>
