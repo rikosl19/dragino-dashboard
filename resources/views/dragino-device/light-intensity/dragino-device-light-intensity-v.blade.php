@@ -10,7 +10,7 @@
                     <div class="col-lg-6">
                         <div class="page-header-title">
                             <div class="d-inline">
-                                <h4>Light Intensity</h4>
+                                <h4>Light Intensity {{ collect(request()->segments())->last() }}</h4>
                                 <span>Data Visualization & Monitoring</span>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
             <div class="page-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        @include('dragino-device.light-intensity.dragino-device-light-intensity-visual-v')
+                        {{-- @include('dragino-device.light-intensity.dragino-device-light-intensity-visual-v') --}}
                         @include('dragino-device.light-intensity.dragino-device-light-intensity-data-v')
                     </div>
                 </div>

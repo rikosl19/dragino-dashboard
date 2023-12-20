@@ -1,8 +1,12 @@
 <!-- Page-Temperature Graphics start -->
 <div class="card">
+
     <div class="card-header">
-        <h5>Graphics Temperature</h5>
+        <h5>Graphics Temperature {{ collect(request()->segments())->last() }} </h5>
+        <button class="btn btn-round btn-primary align-items-end" onClick="window.location.reload();">
+            <i class="icofont icofont-refresh"></i>Refresh</button>
     </div>
+
 
     <div class="card-block">
         <div id="chartdiv"></div>

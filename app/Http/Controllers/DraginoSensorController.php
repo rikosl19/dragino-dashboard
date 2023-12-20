@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\SensorAirTemperature;
 use App\Models\SensorAirHumidity;
+use App\Models\SensorLightIntensity;
+use App\Models\SensorSoilMoisture;
+use App\Models\SensorSoilTemperature;
 use GuzzleHttp\Client;
 use DateTime;
 
@@ -182,7 +186,7 @@ class DraginoSensorController extends Controller
     }
     public function SoilTemperatureDataLast()
     {
-        $data = SensorAirHumidity::latest()->paginate(1);
+        $data = SensorLight::latest()->paginate(1);
 
         $filteredData = $data->map(function ($item) {
             return [

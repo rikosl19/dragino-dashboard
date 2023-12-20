@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthLogin;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DraginoDeviceController;
 use App\Http\Controllers\DraginoSensorController;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,24 +17,34 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-/* 
 Route::get('/', function () {
     return view('welcome');
 });
-*/
 
-Route::get('/', [DashboardController::class, 'index']);
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboard-v');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/login', [AuthLogin::class, 'login']);
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
 
 
 Route::controller(DraginoDeviceController::class)->group(function () {
     Route::prefix('dragino-device')->group(function () {
-        Route::get('/air-temperature', 'monitorAirTemp')->name('lsn50v2-airtemp');
-        Route::get('/air-humidity', 'monitorAirHumidity')->name('lsn50v2-airhumidity');
-        Route::get('/soil-temperature', 'monitorSoilTemp')->name('lsn50v2-soiltemp');
-        Route::get('/soil-moisture', 'monitorSoilMoisture')->name('lsn50v2-soilmoisture');
-        Route::get('/light-intensity', 'monitorLightIntensity')->name('lsn50v2-lightintensity');
+        // Route::get('/air-temperature/{device}', 'monitorAirTemp')->name('lsn50v2-airtemp');
+        Route::get('/air-temperature/{device}', 'monitorAirTemp')->name('lsn50v2-airtemp');
+        Route::get('/air-humidity/{device}', 'monitorAirHumidity')->name('lsn50v2-airhumidity');
+        Route::get('/soil-temperature/{device}', 'monitorSoilTemp')->name('lsn50v2-soiltemp');
+        Route::get('/soil-moisture/{device}', 'monitorSoilMoisture')->name('lsn50v2-soilmoisture');
+        Route::get('/light-intensity/{device}', 'monitorLightIntensity')->name('lsn50v2-lightintensity');
     });
 });
 
@@ -69,6 +78,4 @@ Route::controller(DraginoSensorController::class)->group(function () {
 
 });
 
-// Route::get('/dragino-device/air-temperature', [DraginoDeviceController::class, 'index']);
-// Route::get('/dragino-device/temperature/data', [DraginoDeviceController::class, 'dataTemperature']);
-// Route::get('/dragino-device/temperature/visual', [DraginoDeviceController::class, 'visualTemperature']);
+require __DIR__ . '/auth.php';

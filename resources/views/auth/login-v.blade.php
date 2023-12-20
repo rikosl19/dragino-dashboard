@@ -56,7 +56,7 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
                     
-                        <form class="md-float-material form-material">
+                        <form method="POST" action="{{ route('login') }} class="md-float-material form-material">
                             {{-- <div class="text-center">
                                 <img src="{{ asset("files/assets/images/dragino-logo-text-scale-fix-light.png") }}" alt="small-logo.png">
 

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class SensorLightIntensity extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'device',
+        'lumen',
+        'datetime'
+    ];
 }
