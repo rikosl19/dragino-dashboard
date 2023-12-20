@@ -1,16 +1,18 @@
 <!-- Page-Temperature Data start -->
 <div class="card">
+    <div class="card-header">
+        <h5>Data Table Air Temperature {{ collect(request()->segments())->last() }}</h5>
+    </div>
     <div class="card-block">
-
         <div class="dt-responsive table-responsive ">
             <table id="compact" class="table compact table-striped table-bordered nowrap">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th>No </th>
                         <th>Device</th>
                         <th>Temperature</th>
                         <th>Date Time</th>
-                        <th>Option</th>
+                        {{-- <th>Desc</th> --}}
                     </tr>
                 </thead>
                 <tbody style="text-align:center">
@@ -27,7 +29,7 @@
                                 @php
                                     if ($air_temp->device == 'BAU') {
                                         echo 'LSNv50-BAU';
-                                    } else {
+                                    }else {
                                         echo 'LSNv50-LC';
                                     }
                                 @endphp
@@ -47,9 +49,10 @@
                 <tfoot>
                     <tr>
                         <th>No</th>
+                        <th>Device</th>
                         <th>Temperature</th>
                         <th>Date Time</th>
-                        <th>Option</th>
+                        {{-- <th>Option</th> --}}
                     </tr>
                 </tfoot>
             </table>

@@ -25,22 +25,22 @@
                             <div class="card-block">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="text-c-yellow f-w-600">{}</h4>
-                                        <h6 class="text-muted m-b-0">All Earnings</h6>
+                                        <h4 class="text-c-yellow f-w-600">{{ $data[0]['airtempBAU'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Celcius</h6>
                                     </div>
-                                    <div class="col-4 text-right">
+                                    {{-- <div class="col-4 text-right">
                                         <i class="feather icon-bar-chart f-28"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="card-footer bg-c-yellow">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
+                                        <p class="text-white m-b-0">Air Temperature</p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    {{-- <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -51,22 +51,22 @@
                             <div class="card-block">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="text-c-green f-w-600">290+</h4>
-                                        <h6 class="text-muted m-b-0">Page Views</h6>
+                                        <h4 class="text-c-green f-w-600">{{ $data[0]['airhumBAU'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Percentage</h6>
                                     </div>
-                                    <div class="col-4 text-right">
+                                    {{-- <div class="col-4 text-right">
                                         <i class="feather icon-file-text f-28"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="card-footer bg-c-green">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
+                                        <p class="text-white m-b-0">Air Humidity</p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    {{-- <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -76,22 +76,22 @@
                             <div class="card-block">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="text-c-pink f-w-600">145</h4>
-                                        <h6 class="text-muted m-b-0">Task Completed</h6>
+                                        <h4 class="text-c-pink f-w-600">{{ $data[0]['soiltempBAU'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Celcius</h6>
                                     </div>
-                                    <div class="col-4 text-right">
+                                    {{-- <div class="col-4 text-right">
                                         <i class="feather icon-calendar f-28"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="card-footer bg-c-pink">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
+                                        <p class="text-white m-b-0">Soil Temperature</p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    {{-- <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -101,22 +101,22 @@
                             <div class="card-block">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="text-c-blue f-w-600">500</h4>
-                                        <h6 class="text-muted m-b-0">Downloads</h6>
+                                        <h4 class="text-c-blue f-w-600">{{ $data[0]['soilmoistBAU'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Percentage</h6>
                                     </div>
-                                    <div class="col-4 text-right">
+                                    {{-- <div class="col-4 text-right">
                                         <i class="feather icon-download f-28"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="card-footer bg-c-blue">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
+                                        <p class="text-white m-b-0">Soil Moisture</p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    {{-- <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -126,22 +126,22 @@
                             <div class="card-block">
                                 <div class="row align-items-center">
                                     <div class="col-8">
-                                        <h4 class="text-c-blue f-w-600">500</h4>
-                                        <h6 class="text-muted m-b-0">Downloads</h6>
+                                        <h4 class="text-c-blue f-w-600">{{ $data[0]['lightBAU'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Lux</h6>
                                     </div>
-                                    <div class="col-4 text-right">
+                                    {{-- <div class="col-4 text-right">
                                         <i class="feather icon-download f-28"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="card-footer bg-c-blue">
                                 <div class="row align-items-center">
                                     <div class="col-9">
-                                        <p class="text-white m-b-0">% change</p>
+                                        <p class="text-white m-b-0">Light Intensity</p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    {{-- <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -150,6 +150,150 @@
                 </div>
             </div>
             <div class="page-body">
+                <div class="page-header">
+                    <div class="row align-items-end">
+                        <div class="col-lg-6">
+                            <div class="page-header-title">
+                                <div class="d-inline">
+                                    <h3>Dragino  - LSNv50 (LC)</h3>
+                                    <span>Summary Visualization & Monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- task, page, download counter  start -->
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-yellow f-w-600">{{ $data[1]['airtempLC'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Celcius</h6>
+                                    </div>
+                                    {{-- <div class="col-4 text-right">
+                                        <i class="feather icon-bar-chart f-28"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-yellow">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">Air Temperature</p>
+                                    </div>
+                                    {{-- <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div> --}}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-green f-w-600">{{ $data[1]['airhumLC'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Percentage</h6>
+                                    </div>
+                                    {{-- <div class="col-4 text-right">
+                                        <i class="feather icon-file-text f-28"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-green">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">Air Humidity</p>
+                                    </div>
+                                    {{-- <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-pink f-w-600">{{ $data[1]['soiltempLC'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Celcius</h6>
+                                    </div>
+                                    {{-- <div class="col-4 text-right">
+                                        <i class="feather icon-calendar f-28"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-pink">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">Soil Temperature</p>
+                                    </div>
+                                    {{-- <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-blue f-w-600">{{ $data[1]['soilmoistLC'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Percentage</h6>
+                                    </div>
+                                    {{-- <div class="col-4 text-right">
+                                        <i class="feather icon-download f-28"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-blue">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">Soil Moisture</p>
+                                    </div>
+                                    {{-- <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-blue f-w-600">{{ $data[1]['lightLC'] }}</h4>
+                                        <h6 class="text-muted m-b-0">Lux</h6>
+                                    </div>
+                                    {{-- <div class="col-4 text-right">
+                                        <i class="feather icon-download f-28"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-blue">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">Light Intensity</p>
+                                    </div>
+                                    {{-- <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- task, page, download counter  end -->
+                </div>
+            </div>
+            {{-- <div class="page-body">
                 <div class="page-header">
                     <div class="row align-items-end">
                         <div class="col-lg-6">
@@ -292,7 +436,7 @@
                     </div>
                     <!-- task, page, download counter  end -->
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

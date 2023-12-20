@@ -30,27 +30,27 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class="">
-                                        <a href="{{ url('/dragino-device/air-temperature') }}">
+                                        <a href="{{ url('/dragino-device/air-temperature/BAU') }}">
                                             <span class="pcoded-mtext">Air Temperature</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="{{ url('/dragino-device/air-humidity') }}">
+                                        <a href="{{ url('/dragino-device/air-humidity/BAU') }}">
                                             <span class="pcoded-mtext">Air Humidity</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="{{ url('/dragino-device/soil-temperature') }}">
+                                        <a href="{{ url('/dragino-device/soil-temperature/BAU') }}">
                                             <span class="pcoded-mtext">Soil Temperature</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="{{ url('/dragino-device/soil-moisture') }}">
+                                        <a href="{{ url('/dragino-device/soil-moisture/BAU') }}">
                                             <span class="pcoded-mtext">Soil Moisture</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="{{ url('/dragino-device/light-intensity') }}">
+                                        <a href="{{ url('/dragino-device/light-intensity/BAU') }}">
                                             <span class="pcoded-mtext">Light Intensity</span>
                                         </a>
                                     </li>
@@ -70,27 +70,27 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class="">
-                                        <a href="{{ url('/dragino-device/air-temperature') }}">
+                                        <a href="{{ url('/dragino-device/air-temperature/LC') }}">
                                             <span class="pcoded-mtext">Air Temperature</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/air-humidity/LC') }}">
                                             <span class="pcoded-mtext">Air Humidity</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/soil-temperature/LC') }}">
                                             <span class="pcoded-mtext">Soil Temperature</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/soil-moisture/LC') }}">
                                             <span class="pcoded-mtext">Soil Moisture</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="#">
+                                        <a href="{{ url('/dragino-device/light-intensity/LC') }}">
                                             <span class="pcoded-mtext">Light Intensity</span>
                                         </a>
                                     </li>

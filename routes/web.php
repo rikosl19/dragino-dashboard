@@ -21,9 +21,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard-v');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboard-v');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -31,13 +35,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
 Route::controller(DraginoDeviceController::class)->group(function () {
     Route::prefix('dragino-device')->group(function () {
-        Route::get('/air-temperature', 'monitorAirTemp')->name('lsn50v2-airtemp');
-        Route::get('/air-humidity', 'monitorAirHumidity')->name('lsn50v2-airhumidity');
-        Route::get('/soil-temperature', 'monitorSoilTemp')->name('lsn50v2-soiltemp');
-        Route::get('/soil-moisture', 'monitorSoilMoisture')->name('lsn50v2-soilmoisture');
-        Route::get('/light-intensity', 'monitorLightIntensity')->name('lsn50v2-lightintensity');
+        // Route::get('/air-temperature/{device}', 'monitorAirTemp')->name('lsn50v2-airtemp');
+        Route::get('/air-temperature/{device}', 'monitorAirTemp')->name('lsn50v2-airtemp');
+        Route::get('/air-humidity/{device}', 'monitorAirHumidity')->name('lsn50v2-airhumidity');
+        Route::get('/soil-temperature/{device}', 'monitorSoilTemp')->name('lsn50v2-soiltemp');
+        Route::get('/soil-moisture/{device}', 'monitorSoilMoisture')->name('lsn50v2-soilmoisture');
+        Route::get('/light-intensity/{device}', 'monitorLightIntensity')->name('lsn50v2-lightintensity');
     });
 });
 

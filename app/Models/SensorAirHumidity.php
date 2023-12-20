@@ -11,6 +11,7 @@ class SensorAirHumidity extends Model
 
     protected $fillable = [
         'id',
+        'device',
         'humidity',
         'datetime'
     ];

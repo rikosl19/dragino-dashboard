@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class SensorSoilMoisture extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'device',
+        'soil_moisture',
+        'datetime'
+    ];
 }
