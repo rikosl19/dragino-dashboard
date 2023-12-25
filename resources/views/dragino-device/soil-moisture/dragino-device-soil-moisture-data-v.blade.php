@@ -36,7 +36,7 @@
                                     }
                                 @endphp
                             </td>
-                            <td>{{ $soil_moist->soil_moisture }} <span>&#8451;</span></td>
+                            <td>{{ $soil_moist->soil_moisture }} <span>&#x25;</span></td>
                             <td>{{ $soil_moist->datetime }}</td>
                             {{-- <td>
                                 <button class="btn btn-round btn-outline-warning"><i

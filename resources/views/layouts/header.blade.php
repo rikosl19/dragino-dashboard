@@ -118,8 +118,8 @@
                                         <span class="input-group-addon search-close">
                                             <i class="feather icon-x"></i></span>
                                         <input type="text" class="form-control" />
-                                        <span class="input-group-addon search-btn">
-                                            <i class="feather icon-search"></i></span>
+                                        {{-- <span class="input-group-addon search-btn">
+                                            <i class="feather icon-search"></i></span> --}}
                                     </div>
                                 </div>
                             </li>
@@ -130,7 +130,7 @@
                             </li>
                         </ul>
                         <ul class="nav-right">
-                            <li class="header-notification">
+                            {{-- <li class="header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="feather icon-bell"></i>
@@ -201,13 +201,13 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <img src="{{ asset('files/assets/images/avatar-4.jpg') }}" class="img-radius"
                                             alt="User-Profile-Image" />
-                                        <span>John Due</span>
+                                        <span>{{Auth::user()->name}}</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu"
