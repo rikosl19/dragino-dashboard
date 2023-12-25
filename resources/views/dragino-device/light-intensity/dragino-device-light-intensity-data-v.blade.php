@@ -36,7 +36,7 @@
                                     }
                                 @endphp
                             </td>
-                            <td>{{ $lumens->lumen }} <span>&#8451;</span></td>
+                            <td>{{ $lumens->lumen }} <span>Lux</span></td>
                             <td>{{ $lumens->datetime }}</td>
                             {{-- <td>
                                 <button class="btn btn-round btn-outline-warning"><i
